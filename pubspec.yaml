@@ -1,0 +1,85 @@
+name: food_ordering_system
+description: "An Online Food Ordering System implementing Clean Architecture and RESTful APIs."
+
+# The following line prevents the package from being accidentally published to pub.dev
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Default Cupertino icons for iOS style UI
+  cupertino_icons: ^1.0.8
+
+  # ==========================================
+  # PRESENTATION LAYER
+  # ==========================================
+
+  # State Management: BLoC pattern for separating UI from business logic
+  flutter_bloc: ^8.1.5
+
+  # Routing: Declarative routing system for robust navigation
+  go_router: ^14.2.0
+
+  # ==========================================
+  # DOMAIN LAYER
+  # ==========================================
+
+  # Functional Programming: Provides Either<Failure, Success> for robust error handling in Use Cases
+  dartz: ^0.10.1
+
+  # Value Equality: Allows value-based comparison of Entities and BLoC states
+  equatable: ^2.0.5
+
+  # ==========================================
+  # DATA LAYER
+  # ==========================================
+
+  # Networking: Powerful HTTP client for REST API communication, interceptors, and error handling
+  dio: ^5.4.3
+
+  # Local Database: Fast, offline-first key-value database for caching
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Local Storage: For simple key-value pairs (e.g., authentication tokens, theme preferences)
+  shared_preferences: ^2.3.5
+
+  # ==========================================
+  # CORE & UTILITIES
+  # ==========================================
+
+  # Dependency Injection: Service locator to decouple feature layers
+  get_it: ^7.7.0
+
+  # Environment Variables: Securely load API keys and Base URLs from the .env file
+  flutter_dotenv: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Strict linting rules to encourage good coding practices
+  flutter_lints: ^6.0.0
+
+  # ==========================================
+  # CODE GENERATION
+  # ==========================================
+
+  # Build system needed to run generators
+  build_runner: ^2.4.9
+
+  # Generates TypeAdapters for Hive to store custom Dart objects locally
+  hive_generator: ^2.0.1
+
+flutter:
+  uses-material-design: true
+
+  # Asset declarations
+  assets:
+    - .env # Exposes environment variables to the app bundle

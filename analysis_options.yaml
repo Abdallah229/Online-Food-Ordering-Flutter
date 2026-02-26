@@ -1,0 +1,41 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  # Enforcing strict rules guarantees that data flowing from your
+  # APIs (Data Layer) perfectly matches your Entities (Domain Layer).
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  errors:
+    # Treat missing returns or parameters as hard errors, not just warnings
+    missing_required_param: error
+    missing_return: error
+    # Keeps track of pending tasks without failing the build
+    todo: warning
+
+linter:
+  rules:
+    # --- State & Memory Management ---
+    - cancel_subscriptions
+    - close_sinks
+    - unawaited_futures
+
+    # --- Type & Declaration Strictness ---
+    - always_declare_return_types
+    - prefer_final_locals
+    - avoid_dynamic_calls
+
+    # --- UI & Performance ---
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - prefer_const_literals_to_create_immutables
+
+    # --- Code Cleanliness & Formatting ---
+    - avoid_print # Ensures you use a logger in production instead of print()
+    - avoid_empty_else
+    - avoid_redundant_argument_values
+    - require_trailing_commas # Ensures cleaner Git diffs when adding parameters
+    - prefer_single_quotes
