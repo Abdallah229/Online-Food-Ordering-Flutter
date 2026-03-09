@@ -70,11 +70,11 @@ This document tracks the development progress of the Online Food Ordering System
   - [ ] Build `LoginPage` UI with input validation.
   - [ ] Build `SignUpPage` UI.
 - [ ] **Menu Feature**
-  - [ ] Create `MenuBloc` (handle lazy loading and pagination states).
+  - Create `MenuBloc` (handle lazy loading and pagination states).
   - [ ] Build `MenuScreen` with Grid/List adaptive layouts.
   - [ ] Build `ProductDetailsScreen` (Hero animations for food images).
 - [ ] **Cart/Order Feature**
-  - [ ] Create `CartBloc` (optimistic UI updates for quantity changes).
+  - Create `CartBloc` (optimistic UI updates for quantity changes).
   - [ ] Build `CartScreen` UI.
   - [ ] Build `CheckoutSuccessScreen` UI.
 
